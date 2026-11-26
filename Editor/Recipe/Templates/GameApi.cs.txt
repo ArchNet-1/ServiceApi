@@ -1,0 +1,31 @@
+// Created by the ArchNet Hub (Services > API). This file is yours: change it freely.
+// One line per endpoint of your web API, then from any async method:
+//   ServerStatus status = await Services.Get<GameApi>().Status();
+// Base URLs, timeout, retries: Assets/ArchNet/Api/Data/ApiSettings.asset (Open tool).
+// A login token: Services.Get<GameApi>().AuthToken = token; (memory only, never in an asset).
+// Errors throw ApiException (StatusCode, Body): catch it to show a message.
+// Docs: https://archnet-plateform.fr/#ServiceApi
+
+using System;
+using System.Threading.Tasks;
+using ArchNet.Service;
+
+namespace {{NAMESPACE}}
+{
+    // What GET {base URL}/status answers, e.g. { "version": "1.0.0", "online": true }
+    [Serializable]
+    public class ServerStatus
+    {
+        public string version;
+        public bool online;
+    }
+
+    public class GameApi : ApiService
+    {
+        public Task<ServerStatus> Status() => Get<ServerStatus>("status");
+
+        // More examples:
+        // public Task<Profile> Profile() => Get<Profile>("profile");
+        // public Task<ScoreResult> SendScore(Score score) => Post<ScoreResult>("scores", score);
+    }
+}

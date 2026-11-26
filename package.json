@@ -1,0 +1,17 @@
+{
+  "name": "com.archnet.service.api",
+  "version": "2.0.0",
+  "displayName": "ArchNet - API Service",
+  "description": "Talk to your web API in one line: await api.Get<Profile>(\"profile\"), Post, Put, Delete; JSON in and out, one base URL per environment (development / production), timeout, retries on network errors, clear errors.",
+  "unity": "6000.0",
+  "license": "MIT",
+  "documentationUrl": "https://archnet-plateform.fr/#ServiceApi",
+  "changelogUrl": "https://github.com/ArchNet-1/ServiceApi/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/ArchNet-1/ServiceApi/blob/main/LICENSE.md",
+  "keywords": ["archnet", "service", "api", "http", "rest", "web", "json"],
+  "author": {
+    "name": "ArchNet",
+    "email": "archnetmodule@gmail.com",
+    "url": "https://archnet-plateform.fr"
+  }
+}
